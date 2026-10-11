@@ -1,360 +1,734 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HeadCut — Барбершоп в Минске</title>
-    <meta name="description" content="HeadCut — мужской барбершоп в Минске. Стрижки, оформление бороды, комплексные услуги. ул. Гурского, 41.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HeadCut — Барбершоп в Минске | ул. Гурского, 41</title>
+    <meta
+      name="description"
+      content="HeadCut — мужской барбершоп в Минске. Стрижки, оформление бороды, комплексные услуги. ул. Гурского, 41. Ежедневно 09:00–21:00. Онлайн-запись."
+    />
+    <meta
+      name="keywords"
+      content="барбершоп Минск, стрижка Минск, барбер Минск, мужская стрижка, стрижка бороды, HeadCut"
+    />
+    <meta name="author" content="HeadCut Barbershop" />
+    <meta name="theme-color" content="#0a0a0a" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <meta property="og:type" content="business.business" />
+    <meta property="og:title" content="HeadCut — Барбершоп в Минске" />
+    <meta
+      property="og:description"
+      content="Мужские стрижки, оформление бороды и комплексные услуги. ул. Гурского, 41. Ежедневно 09:00–21:00."
+    />
+    <meta property="og:url" content="https://headcut.by/" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&q=80"
+    />
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="HeadCut Barbershop" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HeadCut — Барбершоп в Минске" />
+    <meta
+      name="twitter:description"
+      content="Мужские стрижки, оформление бороды. ул. Гурского, 41. Ежедневно 09:00–21:00."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&q=80"
+    />
 
-     <script src="app.js" defer></script>
-</head>
-<body>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a0a0a'/%3E%3Ctext x='50' y='72' font-family='Arial' font-size='68' font-weight='bold' fill='%23d4ff3a' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E"
+    />
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "HeadCut Barbershop",
+        "image": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1200&q=80",
+        "@id": "https://headcut.by/",
+        "url": "https://headcut.by/",
+        "telephone": "+375293770813",
+        "priceRange": "5–65 BYN",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ул. Гурского, 41",
+          "addressLocality": "Минск",
+          "addressCountry": "BY"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 53.877794,
+          "longitude": 27.494951
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday"
+            ],
+            "opens": "09:00",
+            "closes": "21:00"
+          }
+        ],
+        "sameAs": ["https://www.instagram.com/_headcut/"],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "reviewCount": "102"
+        }
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
     <div class="noise"></div>
 
     <!-- HEADER -->
     <header id="header">
-        <div class="container">
-            <div class="nav-inner">
-                <a href="#" class="logo">
-                    <span class="logo-dot"></span>
-                    HEADCUT
-                </a>
-                <ul class="nav-links">
-                    <li><a href="#about">О нас</a></li>
-                    <li><a href="#services">Услуги</a></li>
-                    <li><a href="#team">Мастера</a></li>
-                    <li><a href="#booking">Контакты</a></li>
-                </ul>
-                <a href="#booking" class="nav-cta">
-                    Записаться
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <button class="burger" aria-label="Меню">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
+      <div class="container">
+        <div class="nav-inner">
+          <a href="#" class="logo">
+            <span class="logo-dot"></span>
+            HEADCUT
+          </a>
+          <ul class="nav-links">
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#services">Услуги</a></li>
+            <li><a href="#team">Мастера</a></li>
+            <li><a href="#reviews">Отзывы</a></li>
+            <li><a href="#booking">Контакты</a></li>
+          </ul>
+          <div class="nav-right">
+            <a
+              href="tel:+375293770813"
+              class="nav-phone"
+              aria-label="Позвонить"
+            >
+              <i class="fas fa-phone"></i>
+              <span>+375 29 377-08-13</span>
+            </a>
+            <a
+              href="https://www.instagram.com/_headcut/"
+              target="_blank"
+              rel="noopener"
+              class="nav-instagram"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#booking" class="nav-cta">
+              Записаться
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <button
+              class="burger"
+              id="burger"
+              aria-label="Меню"
+              aria-expanded="false"
+            >
+              <span></span><span></span><span></span>
+            </button>
+          </div>
         </div>
+      </div>
     </header>
+
+    <!-- МОБИЛЬНОЕ МЕНЮ -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-menu-links">
+        <li>
+          <a href="#about" data-mobile-link><span>01</span> О нас</a>
+        </li>
+        <li>
+          <a href="#services" data-mobile-link><span>02</span> Услуги</a>
+        </li>
+        <li>
+          <a href="#team" data-mobile-link><span>03</span> Мастера</a>
+        </li>
+        <li>
+          <a href="#reviews" data-mobile-link><span>04</span> Отзывы</a>
+        </li>
+        <li>
+          <a href="#booking" data-mobile-link><span>05</span> Контакты</a>
+        </li>
+      </ul>
+
+      <div class="mobile-menu-contacts">
+        <a href="tel:+375293770813" class="mobile-contact-btn">
+          <i class="fas fa-phone"></i>
+          <div class="mobile-contact-text">
+            <span class="mobile-contact-label">Позвонить</span>
+            <span>+375 29 377-08-13</span>
+          </div>
+        </a>
+        <a
+          href="https://www.instagram.com/_headcut/"
+          target="_blank"
+          rel="noopener"
+          class="mobile-contact-btn"
+        >
+          <i class="fab fa-instagram"></i>
+          <div class="mobile-contact-text">
+            <span class="mobile-contact-label">Instagram</span>
+            <span>@_headcut</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="mobile-menu-socials">
+        <a href="tel:+375293770813" aria-label="Позвонить"
+          ><i class="fas fa-phone"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/_headcut/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://t.me/+375293770813"
+          target="_blank"
+          rel="noopener"
+          aria-label="Telegram"
+          ><i class="fab fa-telegram-plane"></i
+        ></a>
+        <a href="viber://chat?number=%2B375293770813" aria-label="Viber"
+          ><i class="fab fa-viber"></i
+        ></a>
+      </div>
+    </div>
 
     <!-- HERO -->
     <section class="hero">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="container">
-            <div class="hero-badge">
-                <span class="status-dot"></span>
-                Открыто сейчас · Работаем до 21:00
-            </div>
-            <h1>
-                <span class="line"><span>Твой стиль</span></span>
-                <span class="line"><span>начинается <em>здесь.</em></span></span>
-                <span class="line"><span>HeadCut.</span></span>
-            </h1>
-            <div class="hero-bottom">
-                <p class="hero-desc">
-                    Барбершоп в Минске, где каждая стрижка — это точность, характер и внимание к деталям.
-                </p>
-                <div class="hero-actions">
-                    <a href="#booking" class="btn-primary">
-                        Забронировать визит
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#services" class="btn-ghost">
-                        Услуги и цены
-                    </a>
-                </div>
-            </div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="container">
+        <div class="hero-badge" id="heroBadge">
+          <span class="status-dot" id="heroStatusDot"></span>
+          <span id="heroStatusText">Проверяем статус...</span>
         </div>
-        <div class="scroll-indicator">
-            <span>Scroll</span>
-            <div class="scroll-line"></div>
+        <h1>
+          <span class="line"><span>Твой стиль</span></span>
+          <span class="line"
+            ><span>начинается <em>здесь.</em></span></span
+          >
+          <span class="line"><span>HeadCut.</span></span>
+        </h1>
+        <div class="hero-bottom">
+          <p class="hero-desc">
+            Барбершоп в Минске, где каждая стрижка — это точность, характер и
+            внимание к деталям.
+          </p>
+          <div class="hero-actions">
+            <a
+              href="https://yandex.by/maps/157/minsk/?ll=27.495049%2C53.877786&mode=poi&poi%5Bpoint%5D=27.495087%2C53.877769&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D73551894576&z=21"
+              target="_blank"
+              rel="noopener"
+              class="btn-primary"
+            >
+              Записаться онлайн
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#services" class="btn-ghost"> Услуги и цены </a>
+          </div>
         </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
     </section>
 
     <!-- MARQUEE -->
     <div class="marquee">
-        <div class="marquee-track">
-            <div class="marquee-item">
-                <span>Мужские стрижки</span> <i class="fas fa-asterisk"></i>
-                <em>Оформление бороды</em> <i class="fas fa-asterisk"></i>
-                <span>Комплексные услуги</span> <i class="fas fa-asterisk"></i>
-                <em>Воск для лица</em> <i class="fas fa-asterisk"></i>
-            </div>
-            <div class="marquee-item">
-                <span>Мужские стрижки</span> <i class="fas fa-asterisk"></i>
-                <em>Оформление бороды</em> <i class="fas fa-asterisk"></i>
-                <span>Комплексные услуги</span> <i class="fas fa-asterisk"></i>
-                <em>Воск для лица</em> <i class="fas fa-asterisk"></i>
-            </div>
+      <div class="marquee-track">
+        <div class="marquee-item">
+          <span>Мужские стрижки</span> <i class="fas fa-asterisk"></i>
+          <em>Оформление бороды</em> <i class="fas fa-asterisk"></i>
+          <span>Комплексные услуги</span> <i class="fas fa-asterisk"></i>
+          <em>Воск для лица</em> <i class="fas fa-asterisk"></i>
         </div>
+        <div class="marquee-item">
+          <span>Мужские стрижки</span> <i class="fas fa-asterisk"></i>
+          <em>Оформление бороды</em> <i class="fas fa-asterisk"></i>
+          <span>Комплексные услуги</span> <i class="fas fa-asterisk"></i>
+          <em>Воск для лица</em> <i class="fas fa-asterisk"></i>
+        </div>
+      </div>
     </div>
 
     <!-- ABOUT / BENTO -->
     <section id="about">
-        <div class="container">
-            <div class="reveal">
-                <div class="section-label">01 — О нас</div>
-                <h2 class="section-title">Барбершоп <em>нового</em> формата.</h2>
-            </div>
-
-            <div class="bento">
-                <div class="bento-item bento-photo reveal">
-                    <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80" alt="Интерьер HeadCut">
-                    <div class="photo-label">
-                        <i class="fas fa-map-pin" style="color: var(--accent); margin-right: 6px;"></i>
-                        Минск · ул. Гурского, 41
-                    </div>
-                </div>
-
-                <div class="bento-item bento-text reveal">
-                    <div>
-                        <i class="fas fa-quote-left" style="color: var(--accent); font-size: 1.5rem; margin-bottom: 16px; display: block;"></i>
-                        <p>Мы соединили классическую школу барберинга с современной эстетикой. Здесь пахнет кожей, деревом и хорошим кофе.</p>
-                    </div>
-                </div>
-
-                <div class="bento-item bento-stat reveal">
-                    <div class="num">09—21</div>
-                    <div class="label">Работаем ежедневно</div>
-                </div>
-
-                <div class="bento-item bento-icon reveal">
-                    <i class="fas fa-scissors"></i>
-                    <h4>Опасная бритва</h4>
-                </div>
-
-                <div class="bento-item bento-wide reveal">
-                    <h3>Больше, чем стрижка — <em>ритуал.</em></h3>
-                    <p>Каждый визит — это время только для вас. Горячее полотенце, уход премиум-класса и атмосфера настоящего мужского клуба.</p>
-                </div>
-
-                <div class="bento-item bento-stat reveal">
-                    <div class="num">3</div>
-                    <div class="label">Опытных барбера</div>
-                </div>
-
-                <div class="bento-item bento-icon reveal">
-                    <i class="fas fa-crown"></i>
-                    <h4>Premium уход</h4>
-                </div>
-            </div>
+      <div class="container">
+        <div class="reveal">
+          <div class="section-label">01 — О нас</div>
+          <h2 class="section-title">Барбершоп <em>нового</em> формата.</h2>
         </div>
+
+        <div class="bento">
+          <div class="bento-item bento-photo reveal">
+            <img
+              src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=900&q=80"
+              alt="Интерьер HeadCut"
+            />
+            <div class="photo-label">
+              <i
+                class="fas fa-map-pin"
+                style="color: var(--accent); margin-right: 6px"
+              ></i>
+              Минск · ул. Гурского, 41
+            </div>
+          </div>
+
+          <div class="bento-item bento-text reveal">
+            <div>
+              <i class="fas fa-quote-left"></i>
+              <p>
+                Мы соединили классическую школу барберинга с современной
+                эстетикой. Здесь пахнет кожей, деревом и хорошим кофе.
+              </p>
+            </div>
+          </div>
+
+          <div class="bento-item bento-stat reveal">
+            <div>
+              <div class="num" data-count="12">0</div>
+              <div class="label">Лет опыта</div>
+            </div>
+          </div>
+
+          <div class="bento-item bento-icon reveal">
+            <i class="fas fa-scissors"></i>
+            <h4>Опасная бритва</h4>
+          </div>
+
+          <div class="bento-item bento-stat reveal">
+            <div>
+              <div class="num" data-count="5000" data-suffix="+">0</div>
+              <div class="label">Довольных клиентов</div>
+            </div>
+          </div>
+
+          <div class="bento-item bento-icon-sm reveal">
+            <i class="fas fa-star"></i>
+            <h4>5.0 рейтинг</h4>
+          </div>
+
+          <div class="bento-item bento-wide reveal">
+            <h3>Больше, чем стрижка — <em>ритуал.</em></h3>
+            <p>
+              Каждый визит — это время только для вас. Горячее полотенце, уход
+              премиум-класса и атмосфера настоящего мужского клуба.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- SERVICES -->
     <section id="services">
-        <div class="container">
-            <div class="services-header reveal">
-                <div>
-                    <div class="section-label">02 — Услуги</div>
-                    <h2 class="section-title">Прайс без <em>сюрпризов.</em></h2>
-                </div>
-                <a href="#booking" class="btn-ghost">
-                    Записаться онлайн
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-
-            <div class="services-list">
-                <!-- Категория: СТРИЖКА -->
-                <div class="service-row reveal">
-                    <div class="service-num">/ 01</div>
-                    <div class="service-name">Стрижка мужская</div>
-                    <div class="service-desc">Классическая или модельная стрижка с укладкой.</div>
-                    <div class="service-price">от 35 руб.</div>
-                </div>
-                <div class="service-row reveal">
-                    <div class="service-num">/ 01</div>
-                    <div class="service-name">Удлинённая стрижка</div>
-                    <div class="service-desc">Стрижка для средней и длинной длины волос.</div>
-                    <div class="service-price">от 40 руб.</div>
-                </div>
-
-                <!-- Категория: КОМПЛЕКС -->
-                <div class="service-row reveal">
-                    <div class="service-num">/ 02</div>
-                    <div class="service-name">Комплекс · стрижка + борода</div>
-                    <div class="service-desc">Полный образ за один визит: стрижка и оформление бороды.</div>
-                    <div class="service-price">от 50 руб.</div>
-                </div>
-                <div class="service-row reveal">
-                    <div class="service-num">/ 02</div>
-                    <div class="service-name">Отец + сын</div>
-                    <div class="service-desc">Комплексная стрижка для отца и ребёнка по специальной цене.</div>
-                    <div class="service-price">от 65 руб.</div>
-                </div>
-
-                <!-- Категория: БОРОДА -->
-                <div class="service-row reveal">
-                    <div class="service-num">/ 03</div>
-                    <div class="service-name">Стрижка бороды и усов</div>
-                    <div class="service-desc">Формовка, коррекция контуров, уход маслами.</div>
-                    <div class="service-price">от 25 руб.</div>
-                </div>
-
-                <!-- Категория: ДРУГОЕ -->
-                <div class="service-row reveal">
-                    <div class="service-num">/ 04</div>
-                    <div class="service-name">Воск любой зоны лица</div>
-                    <div class="service-desc">Удаление нежелательных волос воском на любом участке лица.</div>
-                    <div class="service-price">от 5 руб.</div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="services-header reveal">
+          <div>
+            <div class="section-label">02 — Услуги</div>
+            <h2 class="section-title">Прайс без <em>сюрпризов.</em></h2>
+          </div>
+          <a
+            href="https://yandex.by/maps/157/minsk/?ll=27.495049%2C53.877786&mode=poi&poi%5Bpoint%5D=27.495087%2C53.877769&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D73551894576&z=21"
+            target="_blank"
+            rel="noopener"
+            class="btn-ghost"
+          >
+            Записаться онлайн
+            <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
+
+        <div class="services-list">
+          <div class="service-row reveal">
+            <div class="service-num">/ 01</div>
+            <div class="service-name">Стрижка мужская</div>
+            <div class="service-desc">
+              Классическая или модельная стрижка с укладкой.
+            </div>
+            <div class="service-price">от 35 руб.</div>
+          </div>
+          <div class="service-row reveal">
+            <div class="service-num">/ 01</div>
+            <div class="service-name">Удлинённая стрижка</div>
+            <div class="service-desc">
+              Стрижка для средней и длинной длины волос.
+            </div>
+            <div class="service-price">от 40 руб.</div>
+          </div>
+          <div class="service-row reveal">
+            <div class="service-num">/ 02</div>
+            <div class="service-name">Комплекс · стрижка + борода</div>
+            <div class="service-desc">
+              Полный образ за один визит: стрижка и оформление бороды.
+            </div>
+            <div class="service-price">от 50 руб.</div>
+          </div>
+          <div class="service-row reveal">
+            <div class="service-num">/ 02</div>
+            <div class="service-name">Отец + сын</div>
+            <div class="service-desc">
+              Комплексная стрижка для отца и ребёнка по специальной цене.
+            </div>
+            <div class="service-price">от 65 руб.</div>
+          </div>
+          <div class="service-row reveal">
+            <div class="service-num">/ 03</div>
+            <div class="service-name">Стрижка бороды и усов</div>
+            <div class="service-desc">
+              Формовка, коррекция контуров, уход маслами.
+            </div>
+            <div class="service-price">от 25 руб.</div>
+          </div>
+          <div class="service-row reveal">
+            <div class="service-num">/ 04</div>
+            <div class="service-name">Воск любой зоны лица</div>
+            <div class="service-desc">
+              Удаление нежелательных волос воском на любом участке лица.
+            </div>
+            <div class="service-price">от 5 руб.</div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- TEAM -->
     <section id="team">
-        <div class="container">
-            <div class="reveal">
-                <div class="section-label">03 — Команда</div>
-                <h2 class="section-title">Мастера, которым <em>доверяют.</em></h2>
-            </div>
-
-            <div class="team-grid">
-                <div class="team-card reveal">
-                    <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=800&q=80" alt="Игорь">
-                    <div class="team-overlay">
-                        <div class="team-name">Игорь</div>
-                        <div class="team-role">Барбер</div>
-                        <div class="team-socials">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-card reveal">
-                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80" alt="Роман">
-                    <div class="team-overlay">
-                        <div class="team-name">Роман</div>
-                        <div class="team-role">Барбер</div>
-                        <div class="team-socials">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-card reveal">
-                    <img src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=800&q=80" alt="Никита">
-                    <div class="team-overlay">
-                        <div class="team-name">Никита</div>
-                        <div class="team-role">Барбер</div>
-                        <div class="team-socials">
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="reveal">
+          <div class="section-label">03 — Команда</div>
+          <h2 class="section-title">Мастера, которым <em>доверяют.</em></h2>
         </div>
+
+        <div class="team-grid">
+          <div class="team-card reveal">
+            <img
+              src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=800&q=80"
+              alt="Игорь"
+            />
+            <div class="team-overlay">
+              <div class="team-name">Игорь</div>
+              <div class="team-role">Барбер</div>
+            </div>
+          </div>
+          <div class="team-card reveal">
+            <img
+              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800&q=80"
+              alt="Роман"
+            />
+            <div class="team-overlay">
+              <div class="team-name">Роман</div>
+              <div class="team-role">Барбер</div>
+            </div>
+          </div>
+          <div class="team-card reveal">
+            <img
+              src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=800&q=80"
+              alt="Никита"
+            />
+            <div class="team-overlay">
+              <div class="team-name">Никита</div>
+              <div class="team-role">Барбер</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="reviews">
+      <div class="container">
+        <div class="reviews-header reveal">
+          <div>
+            <div class="section-label">04 — Отзывы</div>
+            <h2 class="section-title">Нас <em>рекомендуют.</em></h2>
+          </div>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="reviews-rating-card reveal">
+            <div>
+              <div class="reviews-rating-top">
+                <i class="fas fa-star"></i>
+                Рейтинг на Яндекс.Картах
+              </div>
+              <div class="reviews-rating-value">5.0<span>/5</span></div>
+              <div class="reviews-stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="reviews-rating-count">
+              На основе <strong>102 отзывов</strong> и
+              <strong>185 оценок</strong> наших клиентов
+            </div>
+          </div>
+
+          <div class="reviews-fact reveal">
+            <div class="reviews-fact-icon">
+              <i class="fas fa-thumbs-up"></i>
+            </div>
+            <div>
+              <div class="reviews-fact-value">98%</div>
+              <div class="reviews-fact-label">
+                Клиентов возвращаются к нам снова и рекомендуют друзьям
+              </div>
+            </div>
+          </div>
+
+          <div class="reviews-fact reveal">
+            <div class="reviews-fact-icon">
+              <i class="fas fa-user-check"></i>
+            </div>
+            <div>
+              <div class="reviews-fact-value">5000+</div>
+              <div class="reviews-fact-label">
+                Довольных клиентов за время работы барбершопа
+              </div>
+            </div>
+          </div>
+
+          <div class="reviews-quote reveal">
+            <div>
+              <i class="fas fa-quote-left reviews-quote-icon"></i>
+              <p class="reviews-quote-text">
+                Отличный барбершоп! Мастера своего дела, всегда чистый и
+                аккуратный салон, приятная атмосфера. Хожу уже больше года и ни
+                разу не разочаровался.
+              </p>
+            </div>
+            <div class="reviews-quote-author">
+              <div class="reviews-quote-avatar">А</div>
+              <div class="reviews-quote-author-info">
+                <span class="reviews-quote-author-name">Александр</span>
+                <span class="reviews-quote-author-meta"
+                  >Постоянный клиент · Яндекс.Карты</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reviews-actions reveal">
+          <a
+            href="https://yandex.by/maps/org/headcut/73551894576/?ll=27.495049%2C53.877786&z=21"
+            target="_blank"
+            rel="noopener"
+            class="reviews-write-btn"
+          >
+            <i class="fas fa-pen"></i>
+            Оставить отзыв
+          </a>
+          <a
+            href="https://yandex.by/maps/org/headcut/73551894576/reviews/?ll=27.495049%2C53.877786&z=21"
+            target="_blank"
+            rel="noopener"
+            class="reviews-link"
+          >
+            Все отзывы на Яндекс.Картах
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- BOOKING -->
     <section id="booking" class="booking">
-        <div class="container">
-            <div class="booking-card reveal">
-                <div class="booking-content">
-                    <div class="section-label">04 — Запись</div>
-                    <h2>Готовы к <em>переменам?</em></h2>
-                    <p>Оставьте заявку — перезвоним в течение 15 минут, подберём удобное время и мастера.</p>
+      <div class="container">
+        <div class="booking-card reveal">
+          <div class="booking-content">
+            <div class="section-label">05 — Запись</div>
+            <h2>Готовы к <em>переменам?</em></h2>
+            <p>
+              Выберите удобный способ записи — через Яндекс.Карты (с выбором
+              мастера и времени) или оставьте заявку, и мы перезвоним.
+            </p>
 
-                    <div class="contact-info-mini">
-                        <div class="contact-mini-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>г. Минск, ул. Гурского, 41</span>
-                        </div>
-                        <div class="contact-mini-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+375 29 377-08-13</span>
-                        </div>
-                        <div class="contact-mini-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Ежедневно · 09:00 — 21:00</span>
-                        </div>
-                    </div>
+            <div class="booking-actions">
+              <a
+                href="https://yandex.by/maps/157/minsk/?ll=27.495049%2C53.877786&mode=poi&poi%5Bpoint%5D=27.495087%2C53.877769&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D73551894576&z=21"
+                target="_blank"
+                rel="noopener"
+                class="booking-primary-btn"
+              >
+                <div class="btn-label">
+                  <span>Записаться онлайн</span>
+                  <small>Выбор мастера и времени</small>
                 </div>
+                <div class="btn-icon">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </a>
 
-                <form class="booking-form" id="bookingForm">
-                    <div class="form-group">
-                        <label for="name">Ваше имя</label>
-                        <input type="text" id="name" placeholder="Иван" required>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">Телефон</label>
-                            <input type="tel" id="phone" placeholder="+375 (__) ___-__-__" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Услуга</label>
-                            <select id="service">
-                                <option>Стрижка мужская</option>
-                                <option>Удлинённая стрижка</option>
-                                <option>Комплекс · стрижка + борода</option>
-                                <option>Отец + сын</option>
-                                <option>Стрижка бороды и усов</option>
-                                <option>Воск любой зоны лица</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="comment">Пожелания</label>
-                        <textarea id="comment" rows="3" placeholder="Удобное время, мастер..."></textarea>
-                    </div>
-                    <button type="submit">
-                        Записаться
-                        <i class="fas fa-arrow-right"></i>
-                    </button>
-                </form>
+              <a href="#bookingForm" class="booking-secondary-btn">
+                <div class="btn-label">
+                  <span>Оставить заявку</span>
+                  <small>Перезвоним в течение 15 минут</small>
+                </div>
+                <div class="btn-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+              </a>
             </div>
+
+            <div class="contact-info-mini">
+              <div class="contact-mini-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>г. Минск, ул. Гурского, 41</span>
+              </div>
+              <div class="contact-mini-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+375293770813">+375 29 377-08-13</a>
+              </div>
+              <div class="contact-mini-item">
+                <i class="fas fa-clock"></i>
+                <span>Пн–Сб · 09:00 — 21:00 <br />Вс · выходной</span>
+              </div>
+              <div class="contact-mini-item">
+                <i class="fab fa-instagram"></i>
+                <a
+                  href="https://www.instagram.com/_headcut/"
+                  target="_blank"
+                  rel="noopener"
+                  >@_headcut</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <form class="booking-form" id="bookingForm">
+            <div class="form-header">
+              <h3>Оставить заявку</h3>
+              <p>Мы перезвоним в течение 15 минут и подтвердим запись.</p>
+            </div>
+
+            <div class="form-group">
+              <label for="name">Ваше имя *</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Иван"
+                required
+                minlength="2"
+              />
+            </div>
+            <div class="form-group">
+              <label for="phone">Телефон *</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+375 (29) 123-45-67"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="service">Услуга</label>
+              <select id="service" name="service">
+                <option>Стрижка мужская</option>
+                <option>Удлинённая стрижка</option>
+                <option>Комплекс · стрижка + борода</option>
+                <option>Отец + сын</option>
+                <option>Стрижка бороды и усов</option>
+                <option>Воск любой зоны лица</option>
+                <option>Не определился / нужна консультация</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="comment">Пожелания (время, мастер)</label>
+              <textarea
+                id="comment"
+                name="comment"
+                rows="3"
+                placeholder="Например: после 18:00, мастер Игорь"
+              ></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn">
+              <span>Отправить заявку</span>
+              <i class="fas fa-arrow-right"></i>
+            </button>
+
+            <div class="form-status" id="formStatus"></div>
+          </form>
         </div>
+      </div>
     </section>
 
-        <!-- MAP -->
+    <!-- MAP -->
     <section class="map-section" id="map">
-        <div class="container">
-            <div class="map-header reveal">
-                <div class="section-label">05 — Как нас найти</div>
-                <h2 class="section-title">Мы в <em>Минске.</em></h2>
-            </div>
+      <div class="container">
+        <div class="map-header reveal">
+          <div class="section-label">06 — Как нас найти</div>
+          <h2 class="section-title">Мы в <em>Минске.</em></h2>
         </div>
-        <div class="map-wrapper">
-            <!-- Яндекс.Карта: Минск, ул. Гурского, 41 (тёмная тема) -->
-            <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=27.494951%2C53.877794&z=17&pt=27.494951,53.877794,pm2rdl&theme=dark&lang=ru_RU"
-                loading="lazy"
-                allowfullscreen
-                title="HeadCut на карте Минска">
-            </iframe>
+      </div>
+      <div class="map-wrapper">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?ll=27.494951%2C53.877794&z=17&pt=27.494951,53.877794,pm2rdl&theme=dark&lang=ru_RU"
+          loading="lazy"
+          allowfullscreen
+          title="HeadCut на карте Минска"
+        >
+        </iframe>
 
-            <div class="map-card">
-                <h4><i class="fas fa-map-marker-alt"></i> HeadCut Barbershop</h4>
-                <p>г. Минск, ул. Гурского, 41</p>
-                <div class="map-actions">
-                    <a
-                        href="https://yandex.ru/maps/?pt=27.494951,53.877794&z=17&l=map"
-                        target="_blank"
-                        rel="noopener">
-                        <i class="fas fa-external-link-alt"></i> Открыть карту
-                    </a>
-                    <a
-                        href="https://yandex.ru/maps/?rtext=~53.877794%2C27.494951&rtt=auto"
-                        target="_blank"
-                        rel="noopener">
-                        <i class="fas fa-route"></i> Маршрут
-                    </a>
-                </div>
-            </div>
+        <div class="map-card">
+          <h4><i class="fas fa-map-marker-alt"></i> HeadCut Barbershop</h4>
+          <p>г. Минск, ул. Гурского, 41</p>
+          <div class="map-actions">
+            <a
+              href="https://yandex.by/maps/157/minsk/?ll=27.495049%2C53.877786&mode=poi&poi%5Bpoint%5D=27.495087%2C53.877769&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D73551894576&z=21"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-external-link-alt"></i> Открыть карту
+            </a>
+            <a
+              href="https://yandex.ru/maps/?rtext=~53.877794%2C27.494951&rtt=auto"
+              target="_blank"
+              rel="noopener"
+            >
+              <i class="fas fa-route"></i> Маршрут
+            </a>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- BIG TEXT -->
@@ -362,58 +736,86 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <div class="logo">
-                        <span class="logo-dot"></span>
-                        HEADCUT
-                    </div>
-                    <p>Барбершоп в Минске, где традиции встречаются с современностью. Мы делаем не стрижки — мы делаем стиль.</p>
-                    <div class="footer-socials">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-vk"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Навигация</h4>
-                    <ul>
-                        <li><a href="#about">О нас</a></li>
-                        <li><a href="#services">Услуги</a></li>
-                        <li><a href="#team">Мастера</a></li>
-                        <li><a href="#booking">Контакты</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Услуги</h4>
-                    <ul>
-                        <li><a href="#services">Стрижка</a></li>
-                        <li><a href="#services">Комплекс</a></li>
-                        <li><a href="#services">Борода</a></li>
-                        <li><a href="#services">Воск</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Контакты</h4>
-                    <ul>
-                        <li><a href="tel:+375293770813">+375 29 377-08-13</a></li>
-                        <li><a href="#map">ул. Гурского, 41, Минск</a></li>
-                        <li><a href="#">Ежедневно · 09:00 — 21:00</a></li>
-                    </ul>
-                </div>
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="logo">
+              <span class="logo-dot"></span>
+              HEADCUT
             </div>
-
-            <div class="footer-bottom">
-                <span>© 2026 HeadCut Barbershop</span>
-                <span>Дизайн с ♥ для настоящих джентльменов</span>
+            <p>
+              Барбершоп в Минске, где традиции встречаются с современностью. Мы
+              делаем не стрижки — мы делаем стиль.
+            </p>
+            <div class="footer-socials">
+              <a
+                href="https://www.instagram.com/_headcut/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://t.me/+375293770813"
+                target="_blank"
+                rel="noopener"
+                aria-label="Telegram"
+                ><i class="fab fa-telegram-plane"></i
+              ></a>
+              <a href="viber://chat?number=%2B375293770813" aria-label="Viber"
+                ><i class="fab fa-viber"></i
+              ></a>
+              <a href="tel:+375293770813" aria-label="Позвонить"
+                ><i class="fas fa-phone"></i
+              ></a>
             </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Навигация</h4>
+            <ul>
+              <li><a href="#about">О нас</a></li>
+              <li><a href="#services">Услуги</a></li>
+              <li><a href="#team">Мастера</a></li>
+              <li><a href="#reviews">Отзывы</a></li>
+              <li><a href="#booking">Контакты</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Услуги</h4>
+            <ul>
+              <li><a href="#services">Стрижка</a></li>
+              <li><a href="#services">Комплекс</a></li>
+              <li><a href="#services">Борода</a></li>
+              <li><a href="#services">Воск</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Контакты</h4>
+            <ul>
+              <li><a href="tel:+375293770813">+375 29 377-08-13</a></li>
+              <li>
+                <a
+                  href="https://www.instagram.com/_headcut/"
+                  target="_blank"
+                  rel="noopener"
+                  >@_headcut</a
+                >
+              </li>
+              <li><a href="#map">ул. Гурского, 41, Минск</a></li>
+              <li><a href="#">Пн–Сб · 09:00 — 21:00</a></li>
+              <li><a href="#">Вс · выходной</a></li>
+            </ul>
+          </div>
         </div>
-    </footer>
 
-</body>
+        <div class="footer-bottom">
+          <span>© 2026 HeadCut Barbershop</span>
+          <span>Дизайн с ♥ для настоящих джентльменов</span>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
